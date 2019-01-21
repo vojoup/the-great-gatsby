@@ -70,6 +70,6 @@
 
 # Thank you!
 
-[@vojoup🐦](https://twitter.com/vojoup)
+![twittericon](http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png) [@vojoup](https://twitter.com/vojoup)
 <br/>
-[vojoup](https://github.com/vojoup)
+![ghicon](https://cdn.freebiesupply.com/logos/large/2x/github-icon-logo-png-transparent.png) [vojoup](https://github.com/vojoup)
