@@ -6,6 +6,7 @@ import Swipeable from 'react-swipeable';
 import Transition from '../components/transition';
 
 import './index.css';
+import './indicators.css';
 
 const Header = ({ name, title, date }) => (
   <header>
@@ -53,19 +54,29 @@ class TemplateWrapper extends Component {
     document.removeEventListener('keydown', this.navigate);
   }
 
+  getIndicators(slidesLength, currentSlide) {
+    const indicators = [];
+    for (let i = 1; i <= slidesLength; ++i) {
+      indicators.push(<li key={i} className={`indicator ${currentSlide === i ? "active" : ''} ${currentSlide > i ? "past" : ''}`}></li>);
+    }
+    return indicators;
+  }
+
   render() {
-    const { location, children, site } = this.props;
+    const { slidesLength, location, children, site, pageContext: { index } } = this.props;
+
+    console.log(this.props);
 
     return (
       <div>
         <Helmet
           title={`${site.siteMetadata.title} — ${site.siteMetadata.name}`}
         />
-        <Header
+        {index !== 1 && <Header
           name={site.siteMetadata.name}
           title={site.siteMetadata.title}
           date={site.siteMetadata.date}
-        />
+        />}
         <Swipeable
           onSwipingLeft={this.swipeLeft}
           onSwipingRight={this.swipeRight}
@@ -74,6 +85,11 @@ class TemplateWrapper extends Component {
             <div id="slide">{children}</div>
           </Transition>
         </Swipeable>
+        <footer>
+          <ul id="indicators">
+            {this.getIndicators(slidesLength, index)}
+          </ul>
+        </footer>
       </div>
     );
   }
