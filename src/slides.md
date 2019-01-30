@@ -8,7 +8,7 @@
 
 ---
 
-![This Gatsby](https://cdn-images-1.medium.com/max/1000/1*G9aVAI3aezHLw_JsiCfB1Q.jpeg)
+![This Gatsby](https://i.ibb.co/9qdLgvr/gatsby-no-alpha.jpg)
 
 # This Gatsby!
 
@@ -23,7 +23,7 @@
 ---
 
 ## React
-## GrahpQL
+## GraphQL
 
 ---
 
